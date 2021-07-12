@@ -8,15 +8,18 @@ import (
 	"sort"
 )
 
+//Struct
 type Record struct {
 	Name string
-	Year string
+	//Year string
 }
 
-var name string = "Bryan"
+//Variables
+var name = []Record{
+	Name == "Bryan"}
 var data []Record
 
-//Loads CSV file and inclusion of error handling
+//Load the CSV names
 func ReadCSV() {
 	csvFile, err := os.Open("babies-first-names-top-100-boys.csv")
 	if err != nil {
@@ -44,7 +47,7 @@ func ReadCSV() {
 }
 
 //Binary Search of an array
-func binarySearch(list []Record, item string) int {
+func binarySearch(list []int, item int) int {
 	low := 0
 	high := len(list) - 1
 	//ToDo find how to make all ints from string args
@@ -75,7 +78,12 @@ func builtInBinary() {
 
 func main() {
 	ReadCSV()
+	// fmt.Println(data)
+
+	//For Binary Search
 	var position = binarySearch(data, name)
 	fmt.Println("The name is located at position: ", position)
-	// fmt.Println(data)
+
+	//For Selection Sort
+
 }

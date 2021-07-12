@@ -1,7 +1,8 @@
 import csv
+import time
 
 # Import and read the csv file
-csvFile = "babies-first-names-top-100-boys.csv"
+csvFile = "../../babies-first-names-top-100-boys.csv"
 names = []
 year = []
 
@@ -15,6 +16,8 @@ with open(csvFile, 'r') as f:
 name = "Bryan"
 names.sort()
 year.sort()
+amount = len(names)
+start_time = time.time()
 # Bianary Algo
 
 
@@ -36,5 +39,7 @@ def binary_search(list, item):
 
 if __name__ == '__main__':
     position = binary_search(names, name)
-    print("The name is located at position:", position)
+    print(
+        f"The name: {name} is located at position: {position} out of {amount}")
+    print("--- %s seconds ---" % (time.time() - start_time))
     # print(names)
