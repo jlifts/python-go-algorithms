@@ -58,8 +58,14 @@ func subsequence(a, b string) int {
 }
 
 func main() {
-	word1 := "hish"
-	word2 := "vista"
+	var word1 string
+	var word2 string
+
+	// Taking input from user
+	fmt.Println("Enter A word: ")
+	fmt.Scanln(&word1)
+	fmt.Println("Enter A similar word: ")
+	fmt.Scanln(&word2)
 	fmt.Println(substring(word1, word2))
 	fmt.Println(subsequence(word1, word2))
 }
